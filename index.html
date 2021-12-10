@@ -14,9 +14,15 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
     
+    
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+    <link rel="stylesheet"href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+    
+
+
     <!-- FontAwesome JS -->
     <script defer src="assets/fontawesome/js/all.js"></script>
-    
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">  
     
@@ -70,8 +76,9 @@
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">About Me</h2>
                         <div class="content">
-                            <p>Hi! This is Minhaz Uddin Emon, Currently, I am working as software engineer at Ajkerdeal.com ltd since april 2021. I completed my bachelor's degree from Daffodil International University. 
-                                Although, I am continuing to master's study at Jahangirnagar University. I always try to adapt with new technology quickly. I want a position where I can lead from the front and I am trying for this. 
+                            <p style="text-align:justify">Hi! This is Minhaz Uddin Emon, Currently, I am working as software engineer at Ajkerdeal.com ltd since april 2021. I completed my bachelor's degree from Daffodil International University. 
+                                Although, I am continuing to master's study at Jahangirnagar University. I always try to adapt with new technology quickly. I want a position where I can lead from the front and I am trying for this.
+                                I have huge interest about artificial intelligent and machine learning. I have some reaseach experiences and also publised 10 research paper.
                                 </p>
                          
                         </div><!--//content-->
@@ -210,16 +217,28 @@
                 <section class="github section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
+                        <!-- Prepare a container for your calendar. -->
+                            <div class="calendar">
+                                <!-- Loading stuff -->
+                                Loading the data just for you.
+                            </div>
+                            <script>
+                                GitHubCalendar(".calendar", "minhazemon21");
+                                // or enable responsive functionality
+                                GitHubCalendar(".calendar", "minhazemon21", { responsive: true });
+                            </script>
+                        <!--<p>You can embed your GitHub contribution graph calendar using IonicaBizau's <a href="https://github.com/IonicaBizau/github-calendar" target="_blank">GitHub Calendar</a> widget. 
                         
                         <div id="github-graph" class="github-graph">
 
-                        </div><!--//github-graph-->
-
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget.        
+                        </div>-->
+                        <!--//github-graph-->
                         <!--//Usage: https://caseyscarborough.com/projects/github-activity/ -->                       
+
+                        <!--<p>You can also embed your GitHub activities using Casey Scarborough's <a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a> widget.        
                         <div id="ghfeed" class="ghfeed">
-                        </div><!--//ghfeed-->
+                        </div>-->
+                        <!--//ghfeed-->
                         
                     </div><!--//secton-inner-->
                 </section><!--//section-->
@@ -242,11 +261,36 @@
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Skills</h2>
                         <div class="content">
+                           <!--
                             <p class="intro">
-                                Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Github profile so people can get more info there.</p>
-                            
-                            <div class="skillset">
-                               
+                                Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Github profile so people can get more info there.</p>                   
+                           -->
+                            <div class="skillset"> 
+
+                                <div class="item">
+                                    <h3 class="level-title">Machine Learning<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="I am much more interested in this. I have completed many courses and also done some research work by using Machine Learning"><i class="fas fa-info-circle"></i>Expert</span></h3>
+
+                                    <div class="level-bar progress">
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 85%" aria-valuenow="85"  aria-valuemin="0" aria-valuemax="85"></div>
+									</div><!--//level-bar-->                               
+                                </div><!--//item-->
+                                <div class="item">
+                                    <h3 class="level-title">Data Mining<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="I supervised some junior to complete their reseach based on Data Mining"><i class="fas fa-info-circle"></i>Expert</span></h3>
+
+                                    <div class="level-bar progress">
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 85%" aria-valuenow="85"  aria-valuemin="0" aria-valuemax="85"></div>
+									</div><!--//level-bar-->                               
+                                </div><!--//item-->
+                                <div class="item">
+                                    <h3 class="level-title">Computer Vision<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title=""><i class="fas fa-info-circle"></i>Intermediate</span></h3>
+
+                                    <div class="level-bar progress">
+									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 65%" aria-valuenow="65"  aria-valuemin="0" aria-valuemax="65"></div>
+									</div><!--//level-bar-->                               
+                                </div><!--//item-->
+
+                                
+
                                 <div class="item">
                                     <h3 class="level-title">Python &amp; Django<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
 
@@ -390,7 +434,7 @@
                              <p class="pt-2">This Boootstrap portfolio template is handcrafted by UX designer <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a> at <a href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a> for developers and is <strong>FREE</strong> as long as you keep the footer attribution link.</p>
                              <p>If you’d like to <strong>use this template without the attribution link</strong>, you can <a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/" target="_blank">buy the commercial license</a>.</p>
                             
-                             <a class="btn btn-cta-primary btn-download" href="https://minhazemon21.github.io/resume/assets/file/Emon%20CV%20WEB.pdf" download><i class="fas fa-download" ></i> I want to download</a>
+                             <a class="btn btn-cta-primary btn-download" href="cv/Resume_of_Emon_MU.pdf" download><i class="fas fa-download" ></i> I want to download</a>
                             <hr/>
                             <h5 class="subheading pt-3">Want more free Bootstrap themes and templates?</h5>
                             <p>Check out our <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/">collection of free themes and templates.</a></p>
