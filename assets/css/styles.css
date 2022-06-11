@@ -173,11 +173,13 @@ a.dotted-link:hover {
 .section .section-inner {
   background: #fff;
   padding: 30px;
+  border: 2px solid #778492;
+
 }
 
 .section .heading {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #545e69;
   font-size: 24px;
 }
